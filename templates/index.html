@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake News Detector | AI-Powered Analysis</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="https://images.squarespace-cdn.com/content/v1/53345a30e4b0e0212de83d1a/1573490956531-9N7ZM01J64LMZZJW56VX/image-asset.jpeg" type="image/jpeg">
+</head>
+<body>
+    <!-- Intro Animation Overlay -->
+    <div id="intro-animation" class="intro-overlay">
+        <div class="intro-content">
+            <div class="logo-container">
+                <i class="fas fa-shield-alt logo-icon"></i>
+            </div>
+            <h1 class="intro-title">Fake News Detector</h1>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+            <p class="intro-tagline">ML-Powered Truth Verification</p>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-glass fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-shield-alt nav-icon"></i>
+                <span class="brand-text">Fake News Detector</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#hero"><i class="fas fa-home me-1"></i> Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#analyzer"><i class="fas fa-search me-1"></i> Analyzer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about"><i class="fas fa-info-circle me-1"></i> About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#how-it-works"><i class="fas fa-cogs me-1"></i> How It Works</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#visualizationss"><i class="fas fa-chart-bar me-1"></i> visualizationss</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="hero-title animate__animated animate__fadeInUp">
+                        <span class="gradient-text">Detect</span> Fake News with ML Model
+                    </h1>
+                    <p class="hero-subtitle animate__animated animate__fadeInUp animate__delay-1s">
+                        Our advanced Ml model analyzes patterns in news articles to identify potentially misleading information with high accuracy.
+                    </p>
+                    <div class="hero-buttons animate__animated animate__fadeInUp animate__delay-2s">
+                        <a href="" class="btn-gradient primary">
+                            <span>Using Best Model</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="" class="btn-gradient secondary">
+                            <span>LSTM</span>
+                            <i class="fas fa-info-circle"></i>
+                        </a>
+                    </div>
+                    <div class="hero-stats animate__animated animate__fadeInUp animate__delay-3s">
+                        <div class="stat-item">
+                            <span class="stat-number" data-val="99">0</span>%
+                            <span class="stat-label">Accuracy</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-val="1.2">0</span>M+
+                            <span class="stat-label">Articles Analyzed</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-val="99.8">0</span>%
+                            <span class="stat-label">User Satisfaction</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-image-container animate__animated animate__fadeIn animate__delay-1s">
+                        <div class="floating-elements">
+                            <div class="floating-icon icon-1">
+                                <i class="fas fa-newspaper"></i>
+                            </div>
+                            <div class="floating-icon icon-2">
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <div class="floating-icon icon-3">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="floating-icon icon-4">
+                                <i class="fas fa-times-circle"></i>
+                            </div>
+                        </div>
+                        <div class="hero-image">
+                            <div class="ai-brain">
+                                <div class="brain-shape"></div>
+                                <div class="brain-connections"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-wave">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="#ffffff" fill-opacity="1" d="M0,224L48,208C96,192,192,160,288,160C384,160,480,192,576,197.3C672,203,768,181,864,181.3C960,181,1056,203,1152,197.3C1248,192,1344,160,1392,144L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Analysis Section -->
+    <section id="analyzer" class="analyzer-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h6 class="section-pre-title">ML ANALYZER</h6>
+                <h2 class="section-title">Test <span class="gradient-text">Any Article</span></h2>
+                <p class="section-description">Enter text from any news article to analyze its authenticity</p>
+            </div>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="glass-card analyzer-card">
+                        <div class="card-tabs">
+                            <div class="tab active" data-tab="manual-input">
+                                <i class="fas fa-keyboard"></i>
+                                <span>Manual Input</span>
+                            </div>
+                            <div class="tab" data-tab="sample-articles">
+                                <i class="fas fa-file-alt"></i>
+                                <span>Sample Articles</span>
+                            </div>
+                        </div>
+
+                        <div class="card-content">
+                            <!-- Manual Input Tab -->
+                            <div class="tab-content active" id="manual-input-content">
+                                <form id="news-form">
+                                    <div class="floating-input">
+                                        <input type="text" id="article-title" required>
+                                        <label for="article-title">Article Title</label>
+                                    </div>
+                                    
+                                    <div class="floating-input textarea">
+                                        <textarea id="article-text" required></textarea>
+                                        <label for="article-text">Article Text</label>
+                                    </div>
+                                    
+                                    <div class="form-buttons">
+                                        <button type="submit" id="analyze-btn" class="btn-gradient analyze">
+                                            <span>Analyze Article</span>
+                                            <i class="fas fa-search"></i>
+                                        </button>
+                                        <button type="button" id="clear-btn" class="btn-outline">
+                                            <span>Clear</span>
+                                            <i class="fas fa-eraser"></i>
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                            
+                            <!-- Sample Articles Tab -->
+                            <div class="tab-content" id="sample-articles-content">
+                                <div class="sample-article-cards">
+                                    <div class="sample-article" data-index="0">
+                                        <h5>Scientists discover new planet in solar system</h5>
+                                        <p>In a groundbreaking discovery, astronomers have identified a previously unknown planet orbiting our sun...</p>
+                                        <button class="btn-sm load-sample">Load Article</button>
+                                    </div>
+                                    <div class="sample-article" data-index="1">
+                                        <h5>Man grows third arm after COVID vaccine</h5>
+                                        <p>A shocking report has emerged claiming that a 45-year-old man from Minnesota has grown a fully functional third arm...</p>
+                                        <button class="btn-sm load-sample">Load Article</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Result Section -->
+            <div class="row justify-content-center mt-5" id="result-section" style="display: none;">
+                <div class="col-lg-10">
+                    <div class="glass-card result-card">
+                        <div class="result-header" id="result-header">
+                            <h3 id="result-title">Analysis Result</h3>
+                        </div>
+                        <div class="result-body">
+                            <div class="result-animation">
+                                <div class="scan-animation">
+                                    <div class="scan-line"></div>
+                                </div>
+                                <div class="result-icon" id="result-icon"></div>
+                            </div>
+                            <h2 class="result-label" id="result-label">Processing...</h2>
+                            <div class="confidence-wrapper">
+                                <div class="confidence-bar-container">
+                                    <div class="confidence-bar" id="confidence-bar"></div>
+                                </div>
+                                <p class="confidence-text">Confidence: <span id="confidence-score">0</span>%</p>
+                            </div>
+                            <div class="result-explanation" id="result-explanation">
+                                <i class="fas fa-info-circle"></i>
+                                <span id="explanation-text"></span>
+                            </div>
+                            <div class="share-buttons">
+                                <button class="btn-social">
+                                    <i class="fab fa-twitter"></i>
+                                </button>
+                                <button class="btn-social">
+                                    <i class="fab fa-facebook"></i>
+                                </button>
+                                <button class="btn-social">
+                                    <i class="fab fa-linkedin"></i>
+                                </button>
+                                <button class="btn-social">
+                                    <i class="fas fa-envelope"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h6 class="section-pre-title">ABOUT PROJECT</h6>
+                <h2 class="section-title">Fighting <span class="gradient-text">Misinformation</span></h2>
+                <p class="section-description">Advanced technology for a more informed world</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="glass-card about-card">
+                        <div class="about-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Our Mission</h3>
+                        <p>
+                            We're committed to combating the spread of misinformation and empowering users with ML -driven tools 
+                            that help identify potentially misleading content. Our mission is to promote media literacy and 
+                            critical thinking in the digital age.
+                        </p>
+                        <div class="stats-grid">
+                            <div class="stat-box">
+                                <h4>99%</h4>
+                                <p>Detection Accuracy</p>
+                            </div>
+                            <div class="stat-box">
+                                <h4>1.2M</h4>
+                                <p>Training Examples</p>
+                            </div>
+                            <div class="stat-box">
+                                <h4>IEEE</h4>
+                                <p>Research Papers</p>
+                            </div>
+                            <div class="stat-box">
+                                <h4>150+</h4>
+                                <p>Features Analyzed</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="glass-card about-card technology-card">
+                        <div class="about-icon">
+                            <i class="fas fa-microchip"></i>
+                        </div>
+                        <h3>Our Technology</h3>
+                        <p>
+                            Our fake news detector uses a regularized Long Short-Term Memory (LSTM) neural network trained on 
+                            millions of verified and false articles. The system analyzes linguistic patterns, structural elements, 
+                            and semantic inconsistencies that humans might miss.
+                        </p>
+                        <div class="tech-features">
+                            <div class="tech-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Deep linguistic analysis</span>
+                            </div>
+                            <div class="tech-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Semantic inconsistency detection</span>
+                            </div>
+                            <div class="tech-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Source credibility assessment</span>
+                            </div>
+                            <div class="tech-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Emotional manipulation detection</span>
+                            </div>
+                            <div class="tech-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Cross-reference verification</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h6 class="section-pre-title">PROCESS</h6>
+                <h2 class="section-title">How It <span class="gradient-text">Works</span></h2>
+                <p class="section-description">Advanced ML techniques to detect misinformation</p>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <div class="glass-card timeline-content">
+                        <h4>Text Input & Preprocessing</h4>
+                        <p>
+                            Article text undergoes sophisticated preprocessing including tokenization, 
+                            normalization, and feature extraction. Our system analyzes everything from 
+                            sentence structure to emotional tone.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="glass-card timeline-content">
+                        <h4>LSTM Neural Network Analysis</h4>
+                        <p>
+                            Our deep learning model utilizes LSTM architecture to identify patterns 
+                            characteristic of fake news. It captures long-term dependencies in language 
+                            while regularization techniques prevent overfitting.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="glass-card timeline-content">
+                        <h4>Feature Analysis</h4>
+                        <p>
+                            The system analyzes over 150 different features, including lexical diversity, 
+                            emotional manipulation markers, attribution patterns, and source credibility 
+                            indicators commonly associated with fake news.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-check-double"></i>
+                    </div>
+                    <div class="glass-card timeline-content">
+                        <h4>Classification & Confidence Score</h4>
+                        <p>
+                            Our model produces a probability score indicating how likely the article 
+                            is to be fake or genuine. The confidence score reflects the certainty of 
+                            the classification based on the strength of detected patterns.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mt-5">
+                <div class="col-lg-8 offset-lg-2">
+                    <div class="glass-card disclaimer-card">
+                        <div class="disclaimer-icon">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <h4>Important Disclaimer</h4>
+                        <p>
+                            While our system uses advanced ML techniques, it should be used as one of many tools to evaluate news credibility. 
+                            No automated system is perfect, and critical thinking remains essential. Always verify information from multiple 
+                            reliable sources before drawing conclusions or sharing content.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- visualizationss Section -->
+    <section id="visualizationss" class="visualizationss-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h6 class="section-pre-title">MODEL INSIGHTS</h6>
+                <h2 class="section-title">Performance <span class="gradient-text">visualizationss</span></h2>
+                <p class="section-description">Explore the data behind our fake news detection model</p>
+            </div>
+            
+            <!-- Performance Metrics Table -->
+            <div class="row mb-5">
+                <div class="col-lg-10 offset-lg-1">
+                    <div class="glass-card">
+                        <h4 class="mb-4">Model Performance Metrics</h4>
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Model</th>
+                                        <th>Accuracy</th>
+                                        <th>Precision</th>
+                                        <th>Recall</th>
+                                        <th>F1-Score</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Baseline LSTM</td>
+                                        <td>0.9973</td>
+                                        <td>0.9974</td>
+                                        <td>0.9966</td>
+                                        <td>0.9970</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Enhanced LSTM</td>
+                                        <td>0.9911</td>
+                                        <td>0.9911</td>
+                                        <td>0.9891</td>
+                                        <td>0.9901</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Optimized Model</td>
+                                        <td>0.9959</td>
+                                        <td>0.9915</td>
+                                        <td>0.9994</td>
+                                        <td>0.9954</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Random Forest</td>
+                                        <td>0.8375</td>
+                                        <td>0.8156</td>
+                                        <td>0.8601</td>
+                                        <td>0.8832</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Logistic Regression</td>
+                                        <td>0.8951</td>
+                                        <td>0.8156</td>
+                                        <td>0.8708</td>
+                                        <td>0.8212</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Linear SVM</td>
+                                        <td>0.8732</td>
+                                        <td>0.8058</td>
+                                        <td>0.8021</td>
+                                        <td>0.8182</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Naive Bayes</td>
+                                        <td>0.8599</td>
+                                        <td>0.8866</td>
+                                        <td>0.8970</td>
+                                        <td>0.8183</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <!-- visualizations Images -->
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="glass-card visualizations-card">
+                        <h4>Class Distribution</h4>
+                        <div class="visualizations-img">
+                            <img src="C:/Users/jkrut/OneDrive/Desktop/Fake_News/visualizations/class_distribution.png" alt="Class Distribution" class="img-fluid">
+                        </div>
+                        <p class="visualizations-description">Distribution of fake vs. real news articles in our training dataset</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="glass-card visualizations-card">
+                        <h4>Combined Metrics Comparison</h4>
+                        <div class="visualizations-img">
+                            <img src="C:/Users/jkrut/OneDrive/Desktop/Fake_News/visualizations/combined_metrics_comparison.png" alt="Combined Metrics Comparison" class="img-fluid">
+                        </div>
+                        <p class="visualizations-description">Performance comparison across different model configurations</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="glass-card visualizations-card">
+                        <h4>Baseline LSTM Confusion Matrix</h4>
+                        <div class="visualizations-img">
+                            <img src="C:/Users/jkrut/OneDrive/Desktop/Fake_News/visualizations/confusion_matrix_baseline_lstm.png" alt="Baseline LSTM Confusion Matrix" class="img-fluid">
+                        </div>
+                        <p class="visualizations-description">Confusion matrix showing performance of our baseline LSTM model</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="glass-card visualizations-card">
+                        <h4>Enhanced LSTM Confusion Matrix</h4>
+                        <div class="visualizations-img">
+                            <img src="C:/Users/jkrut/OneDrive/Desktop/Fake_News/visualizations/confusion_matrix_enhanced_lstm.png" alt="Enhanced LSTM Confusion Matrix" class="img-fluid">
+                        </div>
+                        <p class="visualizations-description">Confusion matrix showing performance of our enhanced LSTM model</p>
+                    </div>
+                </div>
+
+
+
+                <div class="col-md-6 mb-4">
+                    <div class="glass-card visualizations-card">
+                        <h4>Linear SVM Confusion Matrix</h4>
+                        <div class="visualizations-img">
+                            <img src="C:/Users/jkrut/OneDrive/Desktop/Fake_News/visualizations/confusion_matrix_linear_svm.png" alt="Enhanced LSTM Confusion Matrix" class="img-fluid">
+                        </div>
+                        <p class="visualizations-description">Confusion matrix showing performance of our Linear SVM</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="glass-card visualizations-card">
+                        <h4>Logistic Regression Confusion Matrix</h4>
+                        <div class="visualizations-img">
+                            <img src="C:/Users/jkrut/OneDrive/Desktop/Fake_News/visualizations/confusion_matrix_logistic_regression.png" alt="Enhanced LSTM Confusion Matrix" class="img-fluid">
+                        </div>
+                        <p class="visualizations-description">Confusion matrix showing performance of our Logistic Regression</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="glass-card visualizations-card">
+                        <h4>Naive Bayes Confusion Matrix</h4>
+                        <div class="visualizations-img">
+                            <img src="C:/Users/jkrut/OneDrive/Desktop/Fake_News/visualizations/confusion_matrix_naive_bayes.png" alt="Enhanced LSTM Confusion Matrix" class="img-fluid">
+                        </div>
+                        <p class="visualizations-description">Confusion matrix showing performance of our Naive bayes</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="glass-card visualizations-card">
+                        <h4>Random Forest Confusion Matrix</h4>
+                        <div class="visualizations-img">
+                            <img src="C:/Users/jkrut/OneDrive/Desktop/Fake_News/visualizations/confusion_matrix_random_forest.png" alt="Enhanced LSTM Confusion Matrix" class="img-fluid">
+                        </div>
+                        <p class="visualizations-description">Confusion matrix showing performance of our Random Forest</p>
+                    </div>
+                </div>
+
+
+                <div class="col-md-6 mb-4">
+                    <div class="glass-card visualizations-card">
+                        <h4>Optimized Model Confusion Matrix</h4>
+                        <div class="visualizations-img">
+                            <img src="C:/Users/jkrut/OneDrive/Desktop/Fake_News/visualizations/confusion_matrix_optimized_model.png" alt="Optimized Model Confusion Matrix" class="img-fluid">
+                        </div>
+                        <p class="visualizations-description">Confusion matrix showing performance of our final optimized model</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="glass-card visualizations-card">
+                        <h4>Metrics Comparison</h4>
+                        <div class="visualizations-img">
+                            <img src="C:/Users/jkrut/OneDrive/Desktop/Fake_News/visualizations/metrics_comparison.png" alt="Metrics Comparison" class="img-fluid">
+                        </div>
+                        <p class="visualizations-description">Comparison of key performance metrics across model iterations</p>
+                    </div>
+                </div>
+                <div class="col-md-12 mb-4">
+                    <div class="glass-card visualizations-card">
+                        <h4>Training History Comparison</h4>
+                        <div class="visualizations-img">
+                            <img src="C:/Users/jkrut/OneDrive/Desktop/Fake_News/visualizations/training_history_comparison.png" alt="Training History Comparison" class="img-fluid">
+                        </div>
+                        <p class="visualizations-description">Comparison of training and validation metrics over epochs for different model configurations</p>
+                    </div>
+                </div>
+                <div class="col-md-12 mb-4">
+                    <div class="glass-card visualizations-card">
+                        <h4>Five topic distributions (Topics 1-5) with word frequencies for each topic</h4>
+                        <div class="visualizations-img">
+                            <img src="C:\Users\jkrut\OneDrive\Desktop\Fake_News\visualizations\nlp_analysis\lsa_topics.png" alt="Training History Comparison" class="img-fluid">
+                        </div>
+                        <p class="visualizations-description">Five topic distributions (Topics 1-5) with word frequencies for each topic</p>
+                    </div>
+                </div>
+                <div class="col-md-12 mb-4">
+                    <div class="glass-card visualizations-card">
+                        <h4>Top 20 TF-IDF features by importance (green bar chart)</h4>
+                        <div class="visualizations-img">
+                            <img src="C:\Users\jkrut\OneDrive\Desktop\Fake_News\visualizations\nlp_analysis\tfidf_feature_importance.png" alt="Training History Comparison" class="img-fluid">
+                        </div>
+                        <p class="visualizations-description">Top 20 TF-IDF features by importance (green bar chart)</p>
+                    </div>
+                </div>
+                <div class="col-md-12 mb-4">
+                    <div class="glass-card visualizations-card">
+                        <h4>Top 20 bigrams in fake news vs. real news (orange and blue bar charts)</h4>
+                        <div class="visualizations-img">
+                            <img src="C:\Users\jkrut\OneDrive\Desktop\Fake_News\visualizations\nlp_analysis\top_bigrams.png" alt="Training History Comparison" class="img-fluid">
+                        </div>
+                        <p class="visualizations-description">Top 20 bigrams in fake news vs. real news (orange and blue bar charts)</p>
+                    </div>
+                </div>
+                <div class="col-md-12 mb-4">
+                    <div class="glass-card visualizations-card">
+                        <h4>Top 20 unigrams in fake news vs. real news (orange and blue bar charts)</h4>
+                        <div class="visualizations-img">
+                            <img src="C:\Users\jkrut\OneDrive\Desktop\Fake_News\visualizations\nlp_analysis\top_unigrams.png" alt="Training History Comparison" class="img-fluid">
+                        </div>
+                        <p class="visualizations-description">Top 20 unigrams in fake news vs. real news (orange and blue bar charts)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-wave">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="#0a1128" fill-opacity="1" d="M0,288L48,272C96,256,192,224,288,213.3C384,203,480,213,576,229.3C672,245,768,267,864,261.3C960,256,1056,224,1152,208C1248,192,1344,192,1392,192L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
+        </div>
+        <div class="footer-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="footer-branding">
+                            <a href="#" class="footer-logo">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>Fake News Detector</span>
+                            </a>
+                            <p class="footer-description">
+                                Advanced ML-powered fake news detection for a more informed digital world.
+                            </p>
+                            <div class="social-icons">
+                                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                                <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                                <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-4">
+                        <h5 class="footer-heading">Navigation</h5>
+                        <ul class="footer-links">
+                            <li><a href="#hero">Home</a></li>
+                            <li><a href="#analyzer">Analyzer</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#how-it-works">How It Works</a></li>
+                            <li><a href="#visualizationss">visualizationss</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-4">
+                        <h5 class="footer-heading">Resources</h5>
+                        <ul class="footer-links">
+                            <li><a href="#">Media Literacy</a></li>
+                            <li><a href="#">Research Papers</a></li>
+                            <li><a href="#">Developer API</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-4">
+                        <h5 class="footer-heading">Newsletter</h5>
+                        <p class="footer-newsletter-text">Stay updated with our latest features and news</p>
+                        <div class="footer-newsletter">
+                            <input type="email" placeholder="Email Address">
+                            <button><i class="fas fa-paper-plane"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>© 2025 FakeGuard | ML-Powered Fake News Detection</p>
+                    <p class="footer-disclaimer">This is an academic project. Always verify information from multiple reliable sources.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
